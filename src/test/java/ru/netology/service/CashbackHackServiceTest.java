@@ -8,21 +8,21 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldRemain0IfAmount1000() {
-        assertEquals(service.remain(1000), 0);
+        assertEquals(0, service.remain(1000));
     }
 
     @Test
     public void shouldRemain1000IfAmount0 () {
-        assertEquals(service.remain(0), 1000);
+        assertEquals(1000, service.remain(0));
     }
 
     @Test
     public void shouldRemain1IfAmount999() {
-        assertEquals(service.remain(999), 1);
+        assertEquals(1, service.remain(999));
     }
 
     @Test
     public void shouldRemain999IfAmount1() {
-        assertEquals(service.remain(1), 999);
+        assertEquals(999, service.remain(1));
     }
 }
